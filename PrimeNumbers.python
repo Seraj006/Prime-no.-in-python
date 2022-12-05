@@ -1,0 +1,54 @@
+//  1 -> Write A function to check if a number is prime or not
+//  2 -> Use that function, and print first 100 prime numbers
+
+
+
+# Program to check if a number is prime or not
+
+num = 29
+
+# To take input from the user
+#num = int(input("Enter a number: "))
+
+# define a flag variable
+flag = False
+
+# prime numbers are greater than 1
+if num > 1:
+    # check for factors
+    for i in range(2, num):
+        if (num % i) == 0:
+            # if factor is found, set flag to True
+            flag = True
+            # break out of loop
+            break
+
+# check if flag is True
+if flag:
+    print(num, "is not a prime number")
+else:
+    print(num, "is a prime number")
+    
+    
+    
+    
+  ///////////////////////////  
+    //2 for print 100 prime no.
+    
+    
+ minimum = int(input(" Please Enter the Minimum Value: "))
+maximum = int(input(" Please Enter the Maximum Value: "))
+
+for Number in range (minimum, maximum + 1):
+    count = 0
+    for i in range(2, (Number//2 + 1)):
+        if(Number % i == 0):
+            count = count + 1
+            break
+
+    if (count == 0 and Number != 1):
+        print(" %d" %Number, end = '  ')
+
+    
+    
+    
